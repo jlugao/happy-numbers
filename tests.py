@@ -1,5 +1,21 @@
 import unittest
-from happy import is_happy, is_happy_list
+from happy import is_happy, is_happy_list, sum_of_squares
+
+class TestSumOfSquares(unittest.TestCase):
+    
+    def test_1_is_1(self):
+        self.assertEqual(sum_of_squares(1), 1) 
+    
+    def test_2_is_4(self):
+        self.assertEqual(sum_of_squares(2), 4) 
+    
+    def test_11_is_2(self):
+        self.assertEqual(sum_of_squares(11), 2) 
+    
+    def test_22_is_8(self):
+        self.assertEqual(sum_of_squares(22), 8) 
+
+
 
 class TestHappyNumbers(unittest.TestCase):
     '''
@@ -31,7 +47,6 @@ class TestHappyNumbers(unittest.TestCase):
 
     def test_is_4_not_happy(self):
         self.assertFalse(is_happy(4))
-
 
 
 if __name__ == '__main__':
