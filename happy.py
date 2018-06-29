@@ -1,4 +1,3 @@
-from functools import reduce
 
 def is_happy_list(numbers: list) -> list:
     return list(map(is_happy,numbers))
